@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>jsPractices</title>
+</head>
+<body>
+    <p id="test"></p>
+    <button type="button" onclick="dispDate()">Time</button>
+
+    <p id="test2">Welcome to us!</p>
+    <button type="button" onclick="getText()">Click</button>
+    <button type="button" onclick="document.write('We are the new front end developers, always winners')">
+        Click to see who we are</button>
+
+    <p id="test3"></p>
+    <p id="test4"></p>
+    <p id="test5"></p>
+    <p id="test6"></p>
+    <p id="test7"></p>
+    <p id="test8"></p>
+    <p>input your age to check if you are allowed to log in!</p>
+    <input id="age" value="20">
+    <button onclick="myFunction()">Check</button>
+    <p id="age1"></p>
+    <script>
+        function dispDate() {
+            document.getElementById("test").innerHTML = Date();
+        }
+        
+        function getText() {
+            alert (document.getElementById("test2").textContent)
+        }
+//semicolon used to separate the commands
+        var a = 5;
+        var b = a + 6;
+        var c = a * b;
+        document.getElementById("test3").innerHTML = c;
+        
+        //assignment operators
+        var a = 10;
+        a += 15;
+        document.getElementById("test4").innerHTML = a;
+//string operators
+       /* var x = "Anthony";
+        var y = "Land" 
+        document.getElementById("test5").innerHTML = x + " " + y; or */
+        var x = "Anthony";
+        x += " is clever"
+        document.getElementById("test5").innerHTML = x;
+//comparison operators
+        var a = 9;
+        if (a != 10);
+        document.getElementById("test6").innerHTML = "correct"
+// conditional operators
+        var age = 10;
+        var adult = (age > 18) ? "Yes, you are adult" : "No, you are not adult";
+        document.getElementById("test7").innerHTML = adult;
+
+// Comparison operator with if condition
+ /*const age = 10;
+ var text;
+  if (age < 18) {
+      text = "too young";
+  }
+  document.getElementById("test8").innerHTML = text;*/
+
+// condition (ternary) operator
+function myFunction() {
+    var age, logIn;
+    age = document.getElementById("age").value;
+    logIn = (age > 18) ? "you are allowed to":"you must be at least 18 to";
+    document.getElementById("age1").innerHTML = logIn +  " log in";
+}
+
+  window.alert ("Welcome to the new world!"); 
+    </script>
+</body>
+</html>
